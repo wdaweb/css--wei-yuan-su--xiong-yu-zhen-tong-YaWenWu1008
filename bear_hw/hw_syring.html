@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bottom {
+            width: 600px;
+            height: 80px;
+            border-radius: 3px;
+            border: 1px solid #999;
+            background-image: linear-gradient(white,grey,white);
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%)
+            
+        }
+
+        .bottom::after {
+            content: "";
+            width: 40px;
+            height: 120px;
+            border-radius: 3px;
+            border: 1px solid #999;
+            background-image: linear-gradient(white,grey,white);
+            position: absolute;
+            top: -25%;
+            left: -7%;
+        }
+
+        .bottom::before {
+            content: "";
+            width: 20%;
+            height: 1px;
+            border-top: solid #000000 1px;
+            position: absolute;
+            top: 50%;
+            left: 100%;
+        }
+
+        .top {
+            width: 400px;
+            height: 150px;
+            border: 1px solid #999;
+            background-image: linear-gradient(white,grey,white);
+            position: relative;
+            top: -35px;
+            left: 100px;
+            display: table-cell;
+            vertical-align: bottom;
+            color: #999;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .top::after {
+            content: "";
+            width: 40px;
+            height: 150px;
+            border: 1px solid black;
+            background: black;
+            position: absolute;
+            bottom: -1px;
+            left:180px;
+        }
+
+        .top::before {
+            content: "";
+            width: 178px;
+            height: 150px;
+            background-image: linear-gradient(yellow,grey,yellow);
+            position: absolute;
+            z-index: 1;
+            top: 0%;
+            left: 55.5%;
+        }
+
+        .ruler {
+            width: 400px;
+            height: 150px;
+            background-image: repeating-linear-gradient(90deg, black 0, 1px, transparent 0, transparent 1cm);
+            background-position: .5cm 0;
+            background-repeat: no-repeat;
+            background-size: 100% 25px;
+
+            position: absolute;
+            top: -35px;
+            left: 100px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="bottom">
+        <div class="top">Made in Taiwan</div>
+        <div class="ruler">
+            
+        </div>
+    </div>
+</body>
+</html>
